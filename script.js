@@ -8,7 +8,7 @@ function setLanguage(next) {
   const button = document.getElementById('language');
   button.innerHTML = next === 'zh' ? 'EN <span>↗</span>' : '中文 <span>↗</span>';
   button.setAttribute('aria-label', next === 'zh' ? 'Switch to English' : '切换到中文');
-  document.title = next === 'zh' ? '彭成 Cheng Peng — AI, Vision & Robotics' : 'Cheng Peng — AI, Vision & Robotics';
+  document.title = 'Cheng Peng — AI, Vision & Robotics';
   try { localStorage.setItem('cheng-language', next); } catch {}
 }
 try { if (localStorage.getItem('cheng-language') === 'en') setLanguage('en'); } catch {}
